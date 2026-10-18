@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات المشروع - منصة مشاريع الطلاب</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== الشريط العلوي (تُبنى روابطه من الجلسة عبر common.js) ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>منصة مشاريع الطلاب</h1>
+            <span>جامعة التقنية والعلوم التطبيقية - المصنعة</span>
+        </div>
+        <nav class="nav-links" id="navLinks"></nav>
+    </header>
+
+    <!-- مسار التنقل -->
+    <div class="breadcrumb">
+        <a href="dashboard.html">لوحة التحكم</a>
+        <span>›</span>
+        <span id="crumbTitle">إضافة مشروع</span>
+    </div>
+
+    <section class="auth-section">
+        <div class="auth-card wide-card">
+            <h2 id="formTitle">إضافة مشروع جديد</h2>
+            <p class="auth-subtitle">هذه البيانات تظهر لمن يتصفح منتجاتك (بيانات التواصل للمسجلين فقط)</p>
+
+            <div id="formAlert" class="alert" hidden></div>
+
+            <form id="businessForm" class="auth-form" novalidate>
+
+                <div class="form-group">
+                    <label for="business_name">اسم المشروع</label>
+                    <input type="text" id="business_name" name="business_name" placeholder="مثال: مطبخ أم سعيد" maxlength="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">وصف المشروع</label>
+                    <textarea id="description" name="description" rows="4" maxlength="2000" placeholder="نبذة عن مشروعك وما تقدمه..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact_email">البريد الإلكتروني للتواصل</label>
+                    <input type="email" id="contact_email" name="contact_email" placeholder="example@utas.edu.om" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact_phone">رقم الهاتف (اختياري)</label>
+                    <input type="tel" id="contact_phone" name="contact_phone" placeholder="9XXX XXXX" maxlength="20">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">حفظ المشروع</button>
+                    <a href="dashboard.html" class="btn-cancel">إلغاء</a>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 منصة مشاريع الطلاب - جامعة التقنية والعلوم التطبيقية بالمصنعة</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/business_form.js"></script>
+</body>
+</html>

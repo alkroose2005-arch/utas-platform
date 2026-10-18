@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - منصة مشاريع الطلاب</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== الشريط العلوي (تُبنى روابطه من الجلسة عبر common.js) ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>منصة مشاريع الطلاب</h1>
+            <span>جامعة التقنية والعلوم التطبيقية - المصنعة</span>
+        </div>
+        <nav class="nav-links" id="navLinks"></nav>
+    </header>
+
+    <!-- نموذج تسجيل الدخول -->
+    <section class="auth-section">
+        <div class="auth-card">
+            <h2>تسجيل الدخول</h2>
+            <p class="auth-subtitle">مرحباً بك مجدداً، أدخل بياناتك للمتابعة</p>
+
+            <div id="formAlert" class="alert" hidden></div>
+
+            <form id="loginForm" class="auth-form" novalidate>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="example@utas.edu.om" autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور" autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" class="btn-submit">تسجيل الدخول</button>
+            </form>
+
+            <p class="auth-footer">
+                ليس لديك حساب؟ <a href="register.html">أنشئ حساباً جديداً</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 منصة مشاريع الطلاب - جامعة التقنية والعلوم التطبيقية بالمصنعة</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة منتج - منصة مشاريع الطلاب</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== الشريط العلوي (تُبنى روابطه من الجلسة عبر common.js) ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>منصة مشاريع الطلاب</h1>
+            <span>جامعة التقنية والعلوم التطبيقية - المصنعة</span>
+        </div>
+        <nav class="nav-links" id="navLinks"></nav>
+    </header>
+
+    <!-- مسار التنقل -->
+    <div class="breadcrumb">
+        <a href="dashboard.html">لوحة التحكم</a>
+        <span>›</span>
+        <span id="crumbTitle">إضافة منتج جديد</span>
+    </div>
+
+    <!-- نموذج إضافة / تعديل منتج -->
+    <section class="auth-section">
+        <div class="auth-card wide-card">
+            <h2 id="formTitle">إضافة منتج أو خدمة جديدة</h2>
+            <p class="auth-subtitle" id="formSubtitle">املأ البيانات التالية لعرض منتجك للطلاب</p>
+
+            <div id="formAlert" class="alert" hidden></div>
+
+            <form id="productForm" class="auth-form" novalidate>
+
+                <div class="form-group">
+                    <label for="business_id">المشروع</label>
+                    <select id="business_id" name="business_id" required></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">اسم المنتج أو الخدمة</label>
+                    <input type="text" id="title" name="title" placeholder="مثال: وجبة أرز باللحم" maxlength="120" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category_id">التصنيف</label>
+                    <select id="category_id" name="category_id" required>
+                        <option value="">-- اختر التصنيف --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">السعر (ريال عماني)</label>
+                    <input type="text" id="price" name="price" placeholder="مثال: 3 أو 2 - 5" inputmode="decimal" maxlength="30">
+                    <small class="form-hint">رقم واحد أو نطاق (من - إلى). اتركه فارغاً ليظهر "السعر عند التواصل"</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">وصف المنتج</label>
+                    <textarea id="description" name="description" rows="5" maxlength="3000" placeholder="اكتب وصفاً تفصيلياً للمنتج أو الخدمة..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="images">صور المنتج</label>
+                    <div class="existing-images" id="existingImages"></div>
+                    <input type="file" id="images" name="images[]" accept="image/jpeg,image/png,image/webp" multiple>
+                    <small class="form-hint" id="imagesHint">JPG أو PNG أو WEBP، حتى 5 صور وبحجم أقصاه 5 ميجابايت للصورة (اختياري)</small>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit" id="submitBtn">نشر المنتج</button>
+                    <a href="dashboard.html" class="btn-cancel">إلغاء</a>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 منصة مشاريع الطلاب - جامعة التقنية والعلوم التطبيقية بالمصنعة</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/product_form.js"></script>
+</body>
+</html>

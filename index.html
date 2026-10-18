@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة مشاريع الطلاب - UTAS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== الشريط العلوي (تُبنى روابطه من الجلسة عبر common.js) ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>منصة مشاريع الطلاب</h1>
+            <span>جامعة التقنية والعلوم التطبيقية - المصنعة</span>
+        </div>
+        <nav class="nav-links" id="navLinks"></nav>
+    </header>
+
+    <!-- ===== قسم الترحيب ===== -->
+    <section class="hero">
+        <h2>اكتشف مشاريع زملائك الطلابية</h2>
+        <p>مكان واحد يجمع جميع المشاريع والخدمات التي يقدمها طلاب الجامعة</p>
+    </section>
+
+    <!-- ===== شريط البحث والفلترة ===== -->
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="ابحث عن مشروع أو خدمة..." autocomplete="off">
+
+        <select id="categoryFilter">
+            <option value="">جميع التصنيفات</option>
+        </select>
+    </section>
+
+    <p class="filter-note" id="filterNote" hidden></p>
+
+    <!-- ===== شبكة المنتجات (تُعبّأ من api/listings/search.php) ===== -->
+    <main class="projects-grid" id="projectsGrid"></main>
+
+    <p id="noResults" class="no-results" style="display:none;">
+        لا توجد نتائج مطابقة لبحثك.
+    </p>
+
+    <div class="pager" id="pager"></div>
+
+    <footer class="footer">
+        <p>© 2026 منصة مشاريع الطلاب - جامعة التقنية والعلوم التطبيقية بالمصنعة</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

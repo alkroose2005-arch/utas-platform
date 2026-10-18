@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - منصة مشاريع الطلاب</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== الشريط العلوي (تُبنى روابطه من الجلسة عبر common.js) ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>منصة مشاريع الطلاب</h1>
+            <span>جامعة التقنية والعلوم التطبيقية - المصنعة</span>
+        </div>
+        <nav class="nav-links" id="navLinks"></nav>
+    </header>
+
+    <!-- مسار التنقل -->
+    <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <span>›</span>
+        <span id="crumbTitle">تفاصيل المنتج</span>
+    </div>
+
+    <div id="pageAlert" class="alert page-alert" hidden></div>
+
+    <!-- تفاصيل المنتج (تُعبّأ من api/listings/get.php) -->
+    <section class="project-details" id="details" hidden>
+
+        <!-- صور المنتج -->
+        <div class="project-image" id="gallery"></div>
+
+        <!-- معلومات المنتج -->
+        <div class="project-info">
+            <span class="category-badge" id="badge"></span>
+            <h1 id="title"></h1>
+
+            <p class="project-price" id="price"></p>
+
+            <div class="project-description">
+                <h3>الوصف</h3>
+                <p id="description"></p>
+            </div>
+
+            <div class="project-owner">
+                <h3>معلومات المشروع والتواصل</h3>
+                <ul id="ownerList"></ul>
+                <div id="contactLocked" class="contact-locked" hidden></div>
+            </div>
+
+            <div class="project-actions" id="actions"></div>
+        </div>
+
+    </section>
+
+    <p class="loading-state" id="loading">جارٍ التحميل...</p>
+
+    <footer class="footer">
+        <p>© 2026 منصة مشاريع الطلاب - جامعة التقنية والعلوم التطبيقية بالمصنعة</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/project.js"></script>
+</body>
+</html>

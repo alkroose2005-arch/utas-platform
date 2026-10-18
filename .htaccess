@@ -1,0 +1,22 @@
+# رفع الصور: القيم الافتراضية في XAMPP (2MB لكل ملف) أقل من حد المشروع (5MB × 5 صور)
+<IfModule mod_php.c>
+  php_value upload_max_filesize 6M
+  php_value post_max_size 32M
+  php_value max_file_uploads 10
+</IfModule>
+<IfModule mod_php7.c>
+  php_value upload_max_filesize 6M
+  php_value post_max_size 32M
+  php_value max_file_uploads 10
+</IfModule>
+<IfModule mod_php8.c>
+  php_value upload_max_filesize 6M
+  php_value post_max_size 32M
+  php_value max_file_uploads 10
+</IfModule>
+
+Options -Indexes
+
+<FilesMatch "^(README\.md|\.user\.ini)$">
+  Require all denied
+</FilesMatch>

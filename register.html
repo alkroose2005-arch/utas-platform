@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب جديد - منصة مشاريع الطلاب</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== الشريط العلوي (تُبنى روابطه من الجلسة عبر common.js) ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>منصة مشاريع الطلاب</h1>
+            <span>جامعة التقنية والعلوم التطبيقية - المصنعة</span>
+        </div>
+        <nav class="nav-links" id="navLinks"></nav>
+    </header>
+
+    <!-- نموذج التسجيل -->
+    <section class="auth-section">
+        <div class="auth-card">
+            <h2>إنشاء حساب جديد</h2>
+            <p class="auth-subtitle">انضم إلى منصة مشاريع الطلاب وابدأ بعرض مشروعك</p>
+
+            <div id="formAlert" class="alert" hidden></div>
+
+            <form id="registerForm" class="auth-form" novalidate>
+
+                <div class="form-group">
+                    <label for="full_name">الاسم الكامل</label>
+                    <input type="text" id="full_name" name="full_name" placeholder="أدخل اسمك الكامل" maxlength="100" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني الجامعي</label>
+                    <input type="email" id="email" name="email" placeholder="example@utas.edu.om" autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">نوع الحساب</label>
+                    <select id="role" name="role" required>
+                        <option value="">-- اختر نوع الحساب --</option>
+                        <option value="student">طالب (أتصفح مشاريع الزملاء)</option>
+                        <option value="owner">صاحب مشروع (أعرض منتجاتي وخدماتي)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" name="password" placeholder="8 أحرف على الأقل" minlength="8" maxlength="72" autocomplete="new-password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">تأكيد كلمة المرور</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="أعد إدخال كلمة المرور" minlength="8" maxlength="72" autocomplete="new-password" required>
+                </div>
+
+                <button type="submit" class="btn-submit">إنشاء الحساب</button>
+            </form>
+
+            <p class="auth-footer">
+                لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 منصة مشاريع الطلاب - جامعة التقنية والعلوم التطبيقية بالمصنعة</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+</html>

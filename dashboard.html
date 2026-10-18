@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - منصة مشاريع الطلاب</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== الشريط العلوي (تُبنى روابطه من الجلسة عبر common.js) ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>منصة مشاريع الطلاب</h1>
+            <span>جامعة التقنية والعلوم التطبيقية - المصنعة</span>
+        </div>
+        <nav class="nav-links" id="navLinks"></nav>
+    </header>
+
+    <!-- ترحيب -->
+    <section class="dashboard-hero">
+        <h2 id="welcome">مرحباً بك 👋</h2>
+        <p>هنا يمكنك إدارة مشاريعك ومنتجاتك</p>
+    </section>
+
+    <!-- لوحة التحكم -->
+    <section class="dashboard-container">
+
+        <div id="pageAlert" class="alert" hidden></div>
+
+        <!-- بطاقات الإحصائيات -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-icon">🏪</span>
+                <h3 id="statBusinesses">0</h3>
+                <p>مشاريعي</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">📦</span>
+                <h3 id="statActive">0</h3>
+                <p>المنتجات المنشورة</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🚫</span>
+                <h3 id="statHidden">0</h3>
+                <p>منتجات مخفية من الإدارة</p>
+            </div>
+        </div>
+
+        <!-- إدارة المشاريع -->
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3>مشاريعي</h3>
+                <a href="edit_business.html" class="btn-small">+ إضافة مشروع</a>
+            </div>
+            <div id="businessList"><p class="loading-state">جارٍ التحميل...</p></div>
+        </div>
+
+        <!-- إدارة المنتجات -->
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3>منتجاتي وخدماتي</h3>
+                <a href="add_project.html" class="btn-small">+ إضافة منتج جديد</a>
+            </div>
+
+            <div class="table-wrap">
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>الصورة</th>
+                            <th>اسم المنتج</th>
+                            <th>المشروع</th>
+                            <th>السعر</th>
+                            <th>الحالة</th>
+                            <th>إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listingRows"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 منصة مشاريع الطلاب - جامعة التقنية والعلوم التطبيقية بالمصنعة</p>
+    </footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
